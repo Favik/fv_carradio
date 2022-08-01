@@ -138,7 +138,8 @@ end)
 AddEventHandler("fv_carradio:checkRadioPlay", function()
     while true do
         Wait(2000)
-        if xSound:soundExists(musicId) and playing then
+        if xSound:soundExists(musicId) and playing and not xSound:isLooped(musicId) then
+            Wait(500)
             xSound:onPlayEnd(musicId, function()  
                 SendNUIMessage({ action = 'playend' })
                 playing = false          
