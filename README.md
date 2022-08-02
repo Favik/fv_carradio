@@ -6,9 +6,9 @@ The radio starts to lag at speeds above 200km/h, unfortunately this is not a rad
 <ul>
 <li>xSound - https://github.com/Xogy/xsound</li>
 </ul>
+
 <b><u>Compatibility:</u></b>
 <ul>
-<br>
 <li>Mythic Notifications - https://github.com/JayMontana36/mythic_notify</li>
 </ul>
 <br>
