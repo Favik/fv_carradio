@@ -54,7 +54,7 @@ RegisterNUICallback('action', function(data)
         local musicURL = data.url
         TriggerServerEvent("fv_carradio:soundStatus", "play", musicId, { position = pos, link = data.url})
         if not xSound:soundExists(musicId) and not playing then
-            print('Playing URL: '..musicURL..'\nMusicID: '..musicId)
+            debug('Playing URL: '..musicURL..'\nMusicID: '..musicId)
             TriggerEvent("fv_carradio:checkRadioPlay")
         end
         playing = true
@@ -146,7 +146,7 @@ AddEventHandler("fv_carradio:checkRadioPlay", function()
             end)
         end
         if not playing then 
-            print('Playing End')
+            debug('Playing End')
             break 
         end
     end
@@ -191,5 +191,11 @@ function MusicInfo(event, music)
                 SendNUIMessage({ action = "volumeinfo", volume = volume, })
             end
         end
+    end
+end
+
+function debug(data)
+    if Config.Debug then
+        print(data)
     end
 end

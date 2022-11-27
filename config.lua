@@ -1,4 +1,5 @@
 Config = {}
+Config.Debug = true
 
 Config.CheckVersion = true                -- Check version
 Config.CheckVersionDelay = 60             -- Version check interval (in minutes)
