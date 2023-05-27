@@ -13,7 +13,6 @@ client_script {
 
 server_script {
     '@es_extended/locale.lua',
-    'version.lua',
     'config.lua',
     'server/*.lua',
 }
