@@ -12,3 +12,8 @@ RegisterNetEvent("fv_carradio:soundStatus")
 AddEventHandler("fv_carradio:soundStatus", function(type, musicId, data)
     TriggerClientEvent("fv_carradio:soundStatus", -1, type, musicId, data)
 end)
+
+RegisterNetEvent("fv_carradio:debug")
+AddEventHandler("fv_carradio:debug", function(data)
+    print('^3[Debug]^7: '..data)
+end)
